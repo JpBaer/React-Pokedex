@@ -2,6 +2,7 @@ import React, {useState, useEffect, useCallback} from 'react';
 import Pokecard from './Pokecard'
 import './Pokedex.css'
 import getAllPokemon from '../utils/pokemonAPI'
+import PokemonModal from './PokemonModal';
 
 // let pokemon = [
 //     {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
@@ -21,6 +22,7 @@ const Pokedex = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [offset, setOffset] = useState(0);
+    const [selectedPokemon, setSelectedPokemon] = useState(null);
     const limit = 50;
   
     const fetchPokemonList = useCallback(async () => {
@@ -75,8 +77,13 @@ const Pokedex = () => {
     }
   
 
+    const handleCardClick = (pokemonData) => {
+      console.log('Click!')
+      setSelectedPokemon(pokemonData);
+    };
+
   return(
-  <div className = "Pokedex">
+  <div className = {"Pokedex"}>
     <div className = "Pokedex-cards">   
     {isLoading ? (
         <div>Loading...</div>
@@ -84,10 +91,20 @@ const Pokedex = () => {
         <div>Error: {error}</div>
       ) : (
         pokemonList.map((pokemon, index) => (
-          <Pokecard key={index} id={index + 1} pokename={pokemon.name} />
+          <Pokecard key={index} id={index + 1} pokename={pokemon.name} onClick = {() => handleCardClick([pokemon,index])}/>
         ))
       )}
     </div>  
+
+
+    {selectedPokemon && (
+      <PokemonModal
+      
+      name = {selectedPokemon[0].name}
+      id = {selectedPokemon[1]+1}
+      onClose = {() => setSelectedPokemon(null)}
+      />
+    )}
     </div>
     )
 } 

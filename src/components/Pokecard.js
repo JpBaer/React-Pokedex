@@ -3,9 +3,11 @@ import './Pokecard.css'
 import singlePokemonFetch from '../utils/singlePokemonAPI';
 
 
+
 export default function Pokecard(props){
         //Set state variables
         const [pokemonData ,setPokemonData] = useState(null);
+        // const [modal, setModal] = useState(false);
 
         //destructure props
         const {id, pokename} = props;
@@ -29,11 +31,14 @@ export default function Pokecard(props){
         // useEffect(() => {
         //         console.log(pokemonData);
         // }, [pokemonData]);
-                
+        // const toggleModal = () => {
+        //         setModal(!modal)
+        //         console.log('CLICK!')
+        // }        
         
         
 return(
-        <div className = {`Pokecard ${pokemonData && pokemonData.types[0].type.name}`}>
+        <div className = {`Pokecard ${pokemonData && pokemonData.types[0].type.name}`} onClick = {props.onClick}>
             <img src = {`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${imgId}.png`} alt = "Pokemon" className = "Pokecard-image"/>
             <div className = "Pokecard-title">{pokename}</div>
             <div className = "Pokecard-data">#{id}</div>
@@ -45,8 +50,9 @@ return(
                 <div>Loading...</div>
             )}
             
-            {/* <div className = "Pokecard-data">Type: {pokemonData.types[0].type.name}</div> */}
-
+        {/* {modal &&
+            <PokemonModal toggle = {modal} name = {pokename} img = {`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${imgId}.png`} id = {id}/>
+        } */}
         </div>
 )
 }
