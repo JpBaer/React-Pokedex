@@ -33,11 +33,92 @@
     transition: all ease 500ms;
 }
 
+.Pokecard:hover {
+    box-shadow: 15px 15px 22px -2px rgba(0, 0, 0, 0.435);
+}
+
 .Pokecard img:hover{
     transform: scale(1.2); 
     opacity: 70%;
 }
 
+/* Types Styling */
+.grass {
+    /* background-color: rgb(65, 157, 4); */
+    background: linear-gradient(to bottom left,rgba(65, 157, 4, 0.5), white);
+}
+.poison {
+    background: linear-gradient(to bottom left, rgba(128, 0, 128, 0.5),white);
+}
+
+.fire {
+    background: linear-gradient(to bottom left, #f1a34f7e,white);
+}
+
+.water {
+    background: linear-gradient(to bottom left, rgba(34, 34, 146, 0.5),white);
+  
+}
+
+.bug {
+    background: linear-gradient(to bottom left, rgba(181, 198, 114, 0.5),white);
+   
+}
+
+.normal {
+    background: linear-gradient(to bottom left, #ecebeb,white);
+}
+
+.flying {
+    background: linear-gradient(to bottom left, rgba(211, 238, 243, 0.5),white);
+    
+}
+
+.electric {
+    background: linear-gradient(to bottom left, rgba(255, 255, 0, 0.5),white);
+    
+}
+
+.ground {
+    background: linear-gradient(to bottom left, rgba(81, 57, 30, 0.5),white);
+   
+}
+
+.fairy {
+    background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.5),white);
+}
+
+.fighting {
+    background: linear-gradient(to bottom left, rgba(196, 171, 142, 0.5),white);
+}
+
+.psychic {
+    background: linear-gradient(to bottom left, rgba(221, 128, 185, 0.5),white);
+}
+
+.rock {
+    background: linear-gradient(to bottom left,rgba(145, 128, 103, 0.5) ,white);
+}
+
+.ghost {
+    background: linear-gradient(to bottom left, rgba(77, 57, 77, 0.5),white);
+}
+
+.ice {
+    background: linear-gradient(to bottom left, rgba(146, 237, 237, 0.5),white);
+}
+
+.dragon {
+    background: linear-gradient(to bottom left, rgba(242, 132, 132, 0.5),white);
+}
+
+.dark {
+    background: linear-gradient(to bottom left, rgba(100, 91, 91, 0.5),white);
+}
+
+.steel{
+    background: linear-gradient(to bottom left, rgba(182, 182, 182, 0.5),white);
+}
 /* .Pokecard img:hover {
 	transform: scale(1.25);
 	opacity: 0.7;

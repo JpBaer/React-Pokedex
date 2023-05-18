@@ -5,7 +5,7 @@ import singlePokemonFetch from '../utils/singlePokemonAPI';
 
 export default function Pokecard(props){
         //Set state variables
-        const [pokemonData ,setPokemonData] = useState({});
+        const [pokemonData ,setPokemonData] = useState(null);
 
         //destructure props
         const {id, pokename} = props;
@@ -26,19 +26,26 @@ export default function Pokecard(props){
                 fetchPokemonData(id)
         },[id])
 
-        useEffect(() => {
-                console.log(pokemonData);
-        }, [pokemonData]);
+        // useEffect(() => {
+        //         console.log(pokemonData);
+        // }, [pokemonData]);
                 
-
         
         
 return(
-        <div className = "Pokecard">
-            <img src = {`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${imgId}.png`} alt = "Pokemon" className = "Pokecard-image"/>;
+        <div className = {`Pokecard ${pokemonData && pokemonData.types[0].type.name}`}>
+            <img src = {`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${imgId}.png`} alt = "Pokemon" className = "Pokecard-image"/>
             <div className = "Pokecard-title">{pokename}</div>
             <div className = "Pokecard-data">#{id}</div>
-            {/* <div className = "Pokecard-data">Type: {type}</div> */}
+            {pokemonData ?  (<div className = "Pokecard-data">
+                Type: {pokemonData.types.map((type) => type.type.name).join(', ')
+            }
+            </div>)
+            : (
+                <div>Loading...</div>
+            )}
+            
+            {/* <div className = "Pokecard-data">Type: {pokemonData.types[0].type.name}</div> */}
 
         </div>
 )

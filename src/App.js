@@ -4,7 +4,7 @@ import Pokedex from './components/Pokedex';
 function App() {
   return (
     <div className="App">
-      <h1>Jorgen's Pokedex</h1>
+      <h1>Gotta Catch Em' All!</h1>
       <Pokedex/>
     </div>
   );
