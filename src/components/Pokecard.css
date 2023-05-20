@@ -45,23 +45,23 @@
 /* Types Styling */
 .grass {
     /* background-color: rgb(65, 157, 4); */
-    background: linear-gradient(to bottom left,rgba(65, 157, 4, 0.5), white);
+    background: linear-gradient(to bottom left,rgba(65, 157, 4, 1), white);
 }
 .poison {
-    background: linear-gradient(to bottom left, rgba(128, 0, 128, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(128, 0, 128, 1),white);
 }
 
 .fire {
-    background: linear-gradient(to bottom left, #f1a34f7e,white);
+    background: linear-gradient(to bottom left, #f1a34f,white);
 }
 
 .water {
-    background: linear-gradient(to bottom left, rgba(34, 34, 146, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(34, 34, 146, 1),white);
   
 }
 
 .bug {
-    background: linear-gradient(to bottom left, rgba(181, 198, 114, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(181, 198, 114, 1),white);
    
 }
 
@@ -70,54 +70,54 @@
 }
 
 .flying {
-    background: linear-gradient(to bottom left, rgba(211, 238, 243, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(211, 238, 243, 1),white);
     
 }
 
 .electric {
-    background: linear-gradient(to bottom left, rgba(255, 255, 0, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(255, 255, 0, 1),white);
     
 }
 
 .ground {
-    background: linear-gradient(to bottom left, rgba(81, 57, 30, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(81, 57, 30, 1),white);
    
 }
 
 .fairy {
-    background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(255, 192, 203, 1),white);
 }
 
 .fighting {
-    background: linear-gradient(to bottom left, rgba(196, 171, 142, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(196, 171, 142, 1),white);
 }
 
 .psychic {
-    background: linear-gradient(to bottom left, rgba(221, 128, 185, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(221, 128, 185, 1),white);
 }
 
 .rock {
-    background: linear-gradient(to bottom left,rgba(145, 128, 103, 0.5) ,white);
+    background: linear-gradient(to bottom left,rgba(145, 128, 103, 1) ,white);
 }
 
 .ghost {
-    background: linear-gradient(to bottom left, rgba(77, 57, 77, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(77, 57, 77, 1),white);
 }
 
 .ice {
-    background: linear-gradient(to bottom left, rgba(146, 237, 237, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(146, 237, 237, 1),white);
 }
 
 .dragon {
-    background: linear-gradient(to bottom left, rgba(242, 132, 132, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(242, 132, 132, 1),white);
 }
 
 .dark {
-    background: linear-gradient(to bottom left, rgba(100, 91, 91, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(100, 91, 91, 1),white);
 }
 
 .steel{
-    background: linear-gradient(to bottom left, rgba(182, 182, 182, 0.5),white);
+    background: linear-gradient(to bottom left, rgba(182, 182, 182, 1),white);
 }
 /* .Pokecard img:hover {
 	transform: scale(1.25);

@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(243, 243, 243) ;
-  background-image: url(/Users/jorgenbaertsch/Desktop/CS/Projects/React-Pokedex/public/metallic-gray-pokeball-mjlucu5kdmkdgb9d.jpg);
+  background-image: linear-gradient(to left, rgb(50, 62, 78), rgb(98, 113, 135),rgb(147, 163, 187));
+  /* background-image: url(/Users/jorgenbaertsch/Desktop/CS/Projects/React-Pokedex/public/metallic-gray-pokeball-mjlucu5kdmkdgb9d.jpg); */
+  
   
 }
 
