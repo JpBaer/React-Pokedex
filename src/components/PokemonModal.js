@@ -11,7 +11,7 @@ const PokemonModal = (props) => {
  
   const[pokemonData, setPokemonData] = useState(null)
   const[abilityInfo, setAbilityInfo] = useState(null)
-  const[evolutionData, setEvolutionData] = useState(null)
+
  
 
   const imgId = makeIndexThreeCharacters(props.id);
@@ -34,12 +34,6 @@ const PokemonModal = (props) => {
  
 };
 
-  const fetchEvolution = async(id) => {
-    const result = await evolutionChainFetch(id)
-    console.log('evolution chain result')
-    console.log(result)
-    setEvolutionData(result.data)
-  }
 
   const fetchAbility = async() => {
       const result = await fetchAbilityData(pokemonData.abilities[0].ability.name)
@@ -53,12 +47,10 @@ const PokemonModal = (props) => {
   // populate pokemon data for each card generated
   useEffect(() => {
       fetchPokemonData(props.id)
-      fetchEvolution(props.id)
       
   },[props.id])
 
   useEffect(() =>{
-
     if(pokemonData){
     fetchAbility()
     }
@@ -84,11 +76,11 @@ const PokemonModal = (props) => {
         
                   <header>
                   <h1>{props.name}</h1>
-                  <hr></hr>
+                  {/* <hr></hr> */}
                   </header>
                   <div className = "content-block">
                      {pokemonData &&  <InfoBlock data = {pokemonData}/>}
-                     {abilityInfo && pokemonData && <ImageBlock data = {pokemonData} imgId = {imgId} abilityInfo = {abilityInfo}/>}
+                     {pokemonData && <ImageBlock data = {pokemonData} imgId = {imgId} abilityInfo = {abilityInfo} id = {props.id}/>}
                      {pokemonData && <MovesBlock data = {pokemonData}/>} 
                     
 
