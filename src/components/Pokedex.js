@@ -104,7 +104,7 @@ const Pokedex = () => {
         }}catch(err){
           setSelectedPokemon(null)
         }
-        }
+        
       } 
         searchPokemon()
       } else {
