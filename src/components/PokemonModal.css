@@ -36,6 +36,10 @@
     flex-wrap: wrap; */
 }
 
+.modal-content h1{
+    color: black;
+}
+
 .content-block{
     display:flex;
     justify-content: space-evenly;

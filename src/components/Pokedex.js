@@ -92,14 +92,20 @@ const Pokedex = () => {
   
         const searchPokemon = async() => {
           console.log('inside async single search function')
-         const searchedPokemon = await getSinglePokemon(searchText.toLowerCase());
+         try{
+          const searchedPokemon = await getSinglePokemon(searchText.toLowerCase());
          console.log(searchedPokemon)
+         if(searchedPokemon){
          let singlePokemon = 
           [{name: searchedPokemon.data.name},
          searchedPokemon.data.id - 1
           ]
          setSelectedPokemon(singlePokemon)
+        }}catch(err){
+          setSelectedPokemon(null)
         }
+        }
+      } 
         searchPokemon()
       } else {
         setSelectedPokemon(null);
