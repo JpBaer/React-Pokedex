@@ -3,6 +3,8 @@ import Pokecard from './Pokecard'
 import './Pokedex.css'
 import getAllPokemon from '../utils/pokemonAPI'
 import PokemonModal from './PokemonModal';
+import SearchBar from './SearchBar';
+import getSinglePokemon from '../utils/singlePokemonAPI'
 
 // let pokemon = [
 //     {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
@@ -82,8 +84,31 @@ const Pokedex = () => {
       setSelectedPokemon(pokemonData);
     };
 
+    const handleSearch = (searchText)=>{
+      
+      console.log('inside handle search function')
+
+      if(searchText.length>0){
+  
+        const searchPokemon = async() => {
+          console.log('inside async single search function')
+         const searchedPokemon = await getSinglePokemon(searchText.toLowerCase());
+         console.log(searchedPokemon)
+         let singlePokemon = 
+          [{name: searchedPokemon.data.name},
+         searchedPokemon.data.id - 1
+          ]
+         setSelectedPokemon(singlePokemon)
+        }
+        searchPokemon()
+      } else {
+        setSelectedPokemon(null);
+      }
+    }
+
   return(
   <div className = {"Pokedex"}>
+    <SearchBar onSearch = {handleSearch}/>
     <div className = "Pokedex-cards">   
     {isLoading ? (
         <div>Loading...</div>
