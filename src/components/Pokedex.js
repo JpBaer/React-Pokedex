@@ -20,6 +20,8 @@ import getSinglePokemon from '../utils/singlePokemonAPI'
 
 //Defining Pokedex component
 const Pokedex = () => {
+
+    //Set state variables
     const [pokemonList, setPokemonList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -27,6 +29,9 @@ const Pokedex = () => {
     const [selectedPokemon, setSelectedPokemon] = useState(null);
     const limit = 50;
   
+
+    //Call pokemon API using scroll function
+      //API will call 50 pokemon everytime a scroll milestone is met
     const fetchPokemonList = useCallback(async () => {
       try {
         
